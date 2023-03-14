@@ -7,7 +7,7 @@ Remplacer user par votre nom d'utilisateur, ici zgobji
 
 def main_function(request):
     # Connect to Cloud SQL
-    conn = mysql.connector.connect(user='zgobji', host='35.193.27.250', 
+    conn = mysql.connector.connect(user='zgobji', host='host', 
                               database='bdd_zied_demo')
     
     cursor = conn.cursor()
