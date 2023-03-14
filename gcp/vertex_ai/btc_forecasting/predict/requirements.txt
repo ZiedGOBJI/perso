@@ -1,0 +1,6 @@
+matplotlib
+pandas
+scikit-learn
+tensorflow
+flask
+google-cloud-storage

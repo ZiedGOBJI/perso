@@ -1,0 +1,6 @@
+Création du bucket_zied
+Création de la base de données 
+
+On envoie le dataset.json dans le bucket gsutil cp dataset.json gs://bucket_zied/
+
+Le traitement se fait automatiquement, on retrouve la table créée dans la base de données 

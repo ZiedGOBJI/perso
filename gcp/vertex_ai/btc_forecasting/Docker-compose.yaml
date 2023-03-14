@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+    trainer:
+        image: europe-west1-docker.pkg.dev/glossy-precinct-371813/btc-app/btc-model:latest
+        container_name: trainer
+        build: ./trainer
+        environment:
+            - AIP_MODEL_DIR=/out
+    predict:
+        image: europe-west1-docker.pkg.dev/glossy-precinct-371813/btc-app/btc-predict:latest
+        container_name: predict
+        build: ./predict
+        environment:
+            - AIP_STORAGE_URI=gs://bucket_zied_eu/
+            - AIP_HTTP_PORT=8080
+            - AIP_PREDICT_ROUTE=/prediction
+            - AIP_HEALTH_ROUTE=/health
+        ports:
+            - '8080:8080'

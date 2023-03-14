@@ -1,0 +1,16 @@
+
+REPO_NAME='btc-app'
+PROJECT_ID='glossy-precinct-371813'
+
+# create repo in artifact registry
+gcloud artifacts repositories create $REPO_NAME --repository-format=docker \
+--location=europe-west1 --description="Docker repository"
+
+IMAGE_URI=europe-west1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/btc-model:latest
+
+# configure docker 
+gcloud auth configure-docker europe-west1-docker.pkg.dev
+
+# build and push the container
+docker build ./ -t $IMAGE_URI
+docker push $IMAGE_URI

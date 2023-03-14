@@ -1,0 +1,28 @@
+Consignes:
+
+1_Setup:
+
+Créer une instance Cloud "instance-zied"
+Créer une BDD MySQL "db_zied_demo"
+Ouvrir le Cloud Shell, s'y connecter "gcloud sql connect instance-zied --user=zgobji"
+Regarder si la BDD a bien été créée "show databases"
+Sélectionner la BDD avec "use db_zied_demo", et voir s'il existe des tables "show tables"
+Créer une table "table_etoiles"
+Créer un bucket et importer le .csv "dataset_petit_demo.csv"
+Importer les données du bucket dans la BDD (à partir de la page d'overview de l'instance)
+Voir si les données ont bien été importées: dans le cloud shell "select * from table_etoiles", normalement on a 2 lignes
+
+2_CloudFunction:
+
+Créer une Cloud Function:
+CONNEXIONS->Autoriser tout le trafic (ne pas oublier de gérer les autorisations) 
+Coller le contenu de "main.py" dans "main.py" et le contenu de "requirements.txt" dans "requirements.txt" sans oublier de sélectionner "python11" et renommer le point d'entrée en "main_function"
+
+3_Postman
+
+Ouvrir Postman, sélectionner GET et coller l'URL de déclenchement, lancer un test.
+Sélectionner POST, copier le contenu de "demo.json" et le coller dans BODY -> RAW -> JSON
+Lancer un 2eme test
+Relancer une requête GET pour constater que de nouvelles données ont été insérées.
+
+Arrêter l'instance.
