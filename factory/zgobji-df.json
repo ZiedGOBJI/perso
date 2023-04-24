@@ -1,0 +1,9 @@
+{
+	"name": "zgobji-df",
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5aef163b-83a3-47ed-8792-9876c2ee0d15",
+		"tenantId": "effa6d1c-1c9c-4828-9680-3ecc14e3cea3"
+	}
+}

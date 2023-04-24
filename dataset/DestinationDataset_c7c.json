@@ -1,0 +1,12 @@
+{
+	"name": "DestinationDataset_c7c",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureMySql1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureMySqlTable"
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,85 @@
+{
+	"name": "SourceDataset_c7c",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "usecase",
+				"container": "zgi-conteneur"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "operateur",
+				"type": "String"
+			},
+			{
+				"name": "annee",
+				"type": "String"
+			},
+			{
+				"name": "filiere",
+				"type": "String"
+			},
+			{
+				"name": "code_categorie_consommation",
+				"type": "String"
+			},
+			{
+				"name": "libelle_categorie_consommation",
+				"type": "String"
+			},
+			{
+				"name": "code_grand_secteur",
+				"type": "String"
+			},
+			{
+				"name": "libelle_grand_secteur",
+				"type": "String"
+			},
+			{
+				"name": "code_naf",
+				"type": "String"
+			},
+			{
+				"name": "libelle_secteur_naf2",
+				"type": "String"
+			},
+			{
+				"name": "conso",
+				"type": "String"
+			},
+			{
+				"name": "pdl",
+				"type": "String"
+			},
+			{
+				"name": "indqual",
+				"type": "String"
+			},
+			{
+				"name": "nombre_mailles_secretisees",
+				"type": "String"
+			},
+			{
+				"name": "code_region",
+				"type": "String"
+			},
+			{
+				"name": "libelle_region",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
