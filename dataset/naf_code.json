@@ -21,7 +21,15 @@
 		},
 		"schema": [
 			{
-				"name": "ligne;code;int_v2_40c",
+				"name": "ligne",
+				"type": "String"
+			},
+			{
+				"name": "code",
+				"type": "String"
+			},
+			{
+				"name": "int_v2_40c",
 				"type": "String"
 			}
 		]
