@@ -1,0 +1,29 @@
+{
+	"name": "conso_short",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "conso_short.csv",
+				"folderPath": "usecase",
+				"container": "zgi-conteneur"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "operateur;annee;filiere;code_categorie_consommation;libelle_categorie_consommation;code_grand_secteur;libelle_grand_secteur;code_naf;libelle_secteur_naf2;conso;pdl;indqual;nombre_mailles_secretisees;code_region;libelle_region",
+				"type": "String"
+			}
+		]
+	}
+}
