@@ -19,7 +19,15 @@
 					"name": "naf"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "join_result",
+						"type": "DatasetReference"
+					},
+					"name": "join"
+				}
+			],
 			"transformations": [
 				{
 					"name": "join1"
@@ -58,7 +66,14 @@
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> join1"
+				"     broadcast: 'auto')~> join1",
+				"join1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          {operateur;annee;filiere;code_categorie_consommation;libelle_categorie_consommation;code_grand_secteur;libelle_grand_secteur;code_naf;libelle_secteur_naf2;conso;pdl;indqual;nombre_mailles_secretisees;code_region;libelle_region} as string",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> join"
 			]
 		}
 	}
