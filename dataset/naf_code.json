@@ -1,0 +1,29 @@
+{
+	"name": "naf_code",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "naf_short.csv",
+				"folderPath": "usecase",
+				"container": "zgi-conteneur"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ligne;code;int_v2_40c",
+				"type": "String"
+			}
+		]
+	}
+}
